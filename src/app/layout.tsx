@@ -1,36 +1,32 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Source_Sans_3, Manrope } from "next/font/google";
-
-
-
-
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "@/context/AuthContext";
 import Script from "next/script";
-import SchemaInjector from "@/components/SchemaInjector";
+import { Playfair_Display } from "next/font/google";
 
 const manrope = Manrope({ subsets: ['latin'] });
 const sourceSans = Source_Sans_3({ subsets: ['latin'] });
-
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['600', '700'] });
 
 const siteDetails = {
-    siteName: 'Enki Box',
-    siteUrl: 'https://inkibox.com/',
-    metadata: {
-        title: "Enki Box",
-        description: 'Enki Box',
-    },
-    language: 'en-us',
-    locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`,
-    googleAnalyticsId: '',
+  siteName: 'Enki Box',
+  siteUrl: 'https://enkibox.com/',
+  metadata: {
+    title: "Enki Box",
+    description: 'Enki Box',
+  },
+  language: 'en-us',
+  locale: 'en-US',
+  siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`,
+  googleAnalyticsId: '',
 }
 export const metadata: Metadata = {
   title: siteDetails.metadata.title,
   description: siteDetails.metadata.description,
-  metadataBase: new URL("https://inkibox.com"),
+  metadataBase: new URL("https://enkibox.com"),
   alternates: {
     canonical: "/", // homepage canonical
   },
@@ -48,8 +44,9 @@ export const metadata: Metadata = {
   },
   // ✅ Add keywords
   keywords: [
-    
-  ],
+  'children stories', 'ebooks', 'print editions', 'illustrated books', 'Enki Box'
+],
+
   // ✅ Add publisher info
   authors: [{ name: "Enki Box" }],
   creator: "Enki Box",
@@ -62,20 +59,14 @@ export const metadata: Metadata = {
     siteName: siteDetails.siteName,
     images: [
       {
-        url: "/images/tezcai-logo.png",
+        url: "/images/enkibox-logo.png",
         width: 1200,
         height: 675,
         alt: siteDetails.siteName,
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteDetails.metadata.title,
-    description: siteDetails.metadata.description,
-    images: ["/images/tezcai-logo.png"],
-    creator: "@tezcai_",
-  },
+
 };
 
 export default function RootLayout({
@@ -86,39 +77,17 @@ export default function RootLayout({
   return (
     <html lang="en" >
 
-
       <meta name="google-site-verification" content="0hW2XN5yv_cS-DTcPJyGhI4-SVHFQHjP7PnsYIUge9Q" />
-      <body
-        className={`${manrope.className} ${sourceSans.className} antialiased`}
-      >
+      <body className={`${sourceSans.className} ${manrope.className} ${playfair.className} antialiased`}>
+
         {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
         {/* <Header /> */}
 
         <AuthProvider>
-          <main>{children}</main>
+          <main className="bg-background">{children}</main>
           <Toaster position="top-right" />
         </AuthProvider>
-        {/* <SchemaInjector /> */}
 
-        {/* ✅ JSON-LD: Website with Search */}
-        {/* <Script
-          id="ld-website"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              url: "https://tezcai.com/",
-              name: "Tezcai",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://tezcai.com/search?q={search_term_string}",
-                "query-input": "required name=search_term_string",
-              },
-            }),
-          }}
-        /> */}
       </body>
     </html>
   );

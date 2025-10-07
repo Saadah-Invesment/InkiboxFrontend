@@ -27,6 +27,11 @@ const config: Config = {
         "success": "var(--success)",
         "error": "var(--error)",
 
+        "enkiNavy": "var(--enkiNavy)",
+        "enkiSun": "var(--enkiSun)",
+        "enkiSunDark": "var(--enkiSunDark)",
+        "enkiCream": "var(--enkiCream)",
+
         "primary-accent": "var(--primary-accent)",
         "foreground-accent": "var(--foreground-accent)",
         "hero-background": "var(--hero-background)",
