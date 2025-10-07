@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enki Box – Meaning in Motion</title>
+  <meta name="description" content="Enki Box publishes beautifully illustrated children's stories that blend timeless wisdom with modern imagination. Buy ebooks & print editions with secure online payment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            enkiNavy: '#1F2B4B', // pulled from logo tone
+            enkiSun: '#F6B247',
+            enkiSunDark: '#E67E22',
+            enkiCream: '#FFF9F1'
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .container-lg{max-width:1200px}
+    .logo-ink { fill: none; stroke: none; }
+  </style>
+</head>
+<body class="bg-enkiCream text-enkiNavy font-sans">
+  <!-- Top Bar -->
+  <div class="w-full bg-white/70 backdrop-blur border-b border-black/5">
+    <div class="mx-auto container-lg px-4 py-2 text-sm flex items-center justify-between">
+      <p>Worldwide shipping • Instant e-book download</p>
+      <div class="flex items-center gap-3 opacity-80">
+        <span class="hidden sm:inline">Secure checkout:</span>
+        <img alt="cards" class="h-5" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg">
+        <img alt="mc" class="h-5" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+        <img alt="amex" class="h-5" src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo_%282018%29.svg">
+        <img alt="paypal" class="h-5" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg">
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="mx-auto container-lg px-4 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <!-- Inline SVG logo echoing the provided mark -->
+      <svg width="44" height="44" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="10" y="26" width="44" height="28" rx="4" fill="#1F2B4B"/>
+        <path d="M10 26l12-10 10 10M54 26l-12-10-10 10" fill="#1F2B4B"/>
+        <circle cx="32" cy="18" r="8" fill="#F6B247"/>
+        <path d="M21 26c3-6 11-6 14 0M29 26c3-6 11-6 14 0" fill="none" stroke="#F6B247" stroke-width="2"/>
+        <path d="M49 11l5 3-3 5" fill="#E67E22"/>
+        <g fill="#fff">
+          <rect x="30.5" y="26" width="3" height="28"/>
+          <rect x="10" y="39" width="44" height="3"/>
+        </g>
+      </svg>
+      <div>
+        <div class="font-display text-xl leading-5">Enki <span class="text-enkiSunDark">Box</span></div>
+        <div class="text-xs text-enkiSunDark/90">Meaning in Motion</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#stories" class="hover:text-enkiSunDark">Stories</a>
+      <a href="#videos" class="hover:text-enkiSunDark">Videos</a>
+      <a href="#why" class="hover:text-enkiSunDark">Why Enki</a>
+      <a href="#payments" class="hover:text-enkiSunDark">Payments</a>
+      <a href="#newsletter" class="hover:text-enkiSunDark">Newsletter</a>
+    </nav>
+    <div class="md:hidden">
+      <button id="menuBtn" class="p-2 rounded-lg bg-white shadow-soft" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#1F2B4B" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden md:hidden px-4">
+    <div class="bg-white rounded-2xl shadow-soft p-4 space-y-2">
+      <a href="#stories" class="block py-2">Stories</a>
+      <a href="#videos" class="block py-2">Videos</a>
+      <a href="#why" class="block py-2">Why Enki</a>
+      <a href="#payments" class="block py-2">Payments</a>
+      <a href="#newsletter" class="block py-2">Newsletter</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="mx-auto container-lg px-4 py-12 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="font-display text-4xl md:text-5xl leading-tight">
+        Stories that plant <span class="text-enkiSunDark">wisdom</span> in growing hearts
+      </h1>
+      <p class="mt-5 text-lg text-enkiNavy/80 max-w-prose">Beautifully illustrated children’s books inspired by classic fables and reimagined for today. Spark empathy, courage, and curiosity in readers aged 6–10.</p>
+      <div class="mt-7 flex flex-col sm:flex-row gap-3">
+        <a href="#stories" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-enkiSunDark text-white font-semibold shadow-soft hover:opacity-95">Browse Books</a>
+        <a href="#why" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white text-enkiNavy font-semibold shadow-soft hover:bg-enkiCream">Why Enki Box</a>
+      </div>
+      <div class="mt-6 flex items-center gap-3 text-sm text-enkiNavy/70">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4.2 2 7L12 16l-6.5 4.2 2-7L2 9h7l3-7z" stroke="#E67E22"/></svg>
+        4.8/5 from early readers • Instant e‑book download
+      </div>
+    </div>
+    <div class="relative">
+      <div class="aspect-[4/3] rounded-3xl bg-gradient-to-br from-orange-100 to-amber-100 border border-orange-200 shadow-soft flex items-center justify-center p-8">
+        <div class="text-center">
+          <div class="text-8xl">📚</div>
+          <p class="mt-3 text-enkiNavy/70">Preview pages & purchase securely</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Enki -->
+  <section id="why" class="mx-auto container-lg px-4 py-12">
+    <h2 class="font-display text-3xl">Why families choose Enki Box</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-soft border border-black/5">
+        <div class="text-3xl">✨</div>
+        <h3 class="mt-3 font-semibold">Modern tales, timeless values</h3>
+        <p class="mt-2 text-sm text-enkiNavy/80">Inspired by classic wisdom like <em>Kalila & Dimna</em>, crafted for today’s kids with heart and humor.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-soft border border-black/5">
+        <div class="text-3xl">🎨</div>
+        <h3 class="mt-3 font-semibold">Illustrations kids love</h3>
+        <p class="mt-2 text-sm text-enkiNavy/80">Vivid characters and scenes that make reading a delight at bedtime and beyond.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-soft border border-black/5">
+        <div class="text-3xl">🔒</div>
+        <h3 class="mt-3 font-semibold">Secure & global</h3>
+        <p class="mt-2 text-sm text-enkiNavy/80">Instant e‑book delivery and worldwide shipping. Payments are encrypted and trusted.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories / Shop -->
+  <section id="stories" class="mx-auto container-lg px-4 py-12">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="font-display text-3xl">Featured Stories</h2>
+      <a href="#" class="text-enkiSunDark font-semibold">View all →</a>
+    </div>
+
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-soft border border-black/5 flex flex-col">
+        <div class="bg-gradient-to-br from-amber-50 to-orange-100 h-48 flex items-center justify-center text-6xl">🦊</div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold">The Fox & The Starlight</h3>
+          <p class="text-sm text-enkiNavy/80 mt-1">A clever fox learns that honesty outshines any shortcut.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <div class="font-semibold">$4.00</div>
+              <div class="text-xs text-enkiNavy/60">E‑book (PDF + ePub)</div>
+            </div>
+            <button data-sku="ebook-fox" class="buyBtn px-4 py-2 rounded-lg bg-enkiSunDark text-white text-sm font-semibold">Buy Now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-soft border border-black/5 flex flex-col">
+        <div class="bg-gradient-to-br from-amber-50 to-orange-100 h-48 flex items-center justify-center text-6xl">🦁</div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold">The Lion’s Gentle Roar</h3>
+          <p class="text-sm text-enkiNavy/80 mt-1">Strength meets kindness when a prince of the jungle finds a new friend.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <div class="font-semibold">$9.99</div>
+              <div class="text-xs text-enkiNavy/60">Paperback (Ships worldwide)</div>
+            </div>
+            <button data-sku="print-lion" class="buyBtn px-4 py-2 rounded-lg bg-enkiSunDark text-white text-sm font-semibold">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-soft border border-black/5 flex flex-col">
+        <div class="bg-gradient-to-br from-amber-50 to-orange-100 h-48 flex items-center justify-center text-6xl">🕊️</div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold">Wings of a Promise</h3>
+          <p class="text-sm text-enkiNavy/80 mt-1">A small bird keeps a big promise and discovers true courage.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <div class="font-semibold">$4.00</div>
+              <div class="text-xs text-enkiNavy/60">E‑book (PDF + ePub)</div>
+            </div>
+            <button data-sku="ebook-bird" class="buyBtn px-4 py-2 rounded-lg bg-enkiSunDark text-white text-sm font-semibold">Buy Now</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Videos (Early Access) -->
+  <section id="videos" class="mx-auto container-lg px-4 py-12">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="font-display text-3xl">Early‑Access Videos</h2>
+      <a href="#" class="text-enkiSunDark font-semibold">View all →</a>
+    </div>
+    <p class="mt-3 text-enkiNavy/80 max-w-3xl">We transform our stories into short, captivating videos. <strong>New releases</strong> are available here first for a small fee. After an early‑access period, we upload them to our free <a href="#" class="underline decoration-enkiSunDark/60 hover:text-enkiSunDark">YouTube channel</a>.</p>
+
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Video Card 1 -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-soft border border-black/5 flex flex-col">
+        <div class="bg-gradient-to-br from-amber-50 to-orange-100 h-48 flex items-center justify-center text-6xl">▶️</div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold">The Fox & The Starlight — Short Film</h3>
+          <p class="text-sm text-enkiNavy/80 mt-1">Early access HD video (4–6 min). Watch now on enki‑box.com.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <div class="font-semibold">$1.99</div>
+              <div class="text-xs text-enkiNavy/60">Stream instantly</div>
+            </div>
+            <button data-sku="video-fox" class="buyBtn px-4 py-2 rounded-lg bg-enkiSunDark text-white text-sm font-semibold">Unlock</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Video Card 2 -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-soft border border-black/5 flex flex-col">
+        <div class="bg-gradient-to-br from-amber-50 to-orange-100 h-48 flex items-center justify-center text-6xl">▶️</div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold">The Lion’s Gentle Roar — Short Film</h3>
+          <p class="text-sm text-enkiNavy/80 mt-1">Exclusive early access (HD). Upload to YouTube after release window.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <div class="font-semibold">$2.49</div>
+              <div class="text-xs text-enkiNavy/60">Stream instantly</div>
+            </div>
+            <button data-sku="video-lion" class="buyBtn px-4 py-2 rounded-lg bg-enkiSunDark text-white text-sm font-semibold">Unlock</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Video Card 3 -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-soft border border-black/5 flex flex-col">
+        <div class="bg-gradient-to-br from-amber-50 to-orange-100 h-48 flex items-center justify-center text-6xl">▶️</div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold">Wings of a Promise — Short Film</h3>
+          <p class="text-sm text-enkiNavy/80 mt-1">Early access HD video. Teaches courage & keeping promises.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <div class="font-semibold">$1.99</div>
+              <div class="text-xs text-enkiNavy/60">Stream instantly</div>
+            </div>
+            <button data-sku="video-bird" class="buyBtn px-4 py-2 rounded-lg bg-enkiSunDark text-white text-sm font-semibold">Unlock</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-6 text-xs text-enkiNavy/60">Note: After purchase, you’ll receive an email with a <strong>signed streaming URL</strong> (expires after 72 hours) and, if selected, a <strong>download link</strong> (MP4). Videos later appear on our free YouTube channel.</div>
+  </section>
+
+  <!-- Payments & Security -->
+  <section id="payments" class="mx-auto container-lg px-4 py-12">
+    <div class="bg-white rounded-3xl p-8 shadow-soft border border-black/5">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="font-display text-3xl">Safe, simple checkout</h2>
+          <p class="mt-3 text-enkiNavy/80">Pay securely with major cards, PayPal, or local methods. E‑books arrive instantly in your inbox. Print editions ship globally with tracking. Video purchases include <strong>streaming access via signed URL</strong> (time‑limited) or an optional <strong>download</strong>.</p>
+          <ul class="mt-5 space-y-2 text-sm">
+            <li class="flex items-start gap-2"><span class="text-lg">🔐</span> TLS/SSL encrypted payments via trusted gateways (Stripe/PayPal).</li>
+            <li class="flex items-start gap-2"><span class="text-lg">⚡</span> Instant download links after purchase.</li>
+            <li class="flex items-start gap-2"><span class="text-lg">📦</span> Worldwide shipping for print editions.</li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-white to-amber-50 border border-orange-200 rounded-2xl p-6">
+          <div class="text-sm text-enkiNavy/80">Payment methods</div>
+          <div class="mt-3 flex items-center gap-4 flex-wrap">
+            <img class="h-8" alt="Visa" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"/>
+            <img class="h-8" alt="Mastercard" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"/>
+            <img class="h-8" alt="Amex" src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo_%282018%29.svg"/>
+            <img class="h-8" alt="PayPal" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"/>
+          </div>
+          <div class="mt-6 text-xs text-enkiNavy/60">Logos are for illustration. Actual options depend on your region.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="mx-auto container-lg px-4 py-12">
+    <div class="bg-enkiNavy text-white rounded-3xl p-8 shadow-soft">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="font-display text-3xl">Join the Enki family</h2>
+          <p class="mt-2 text-white/80">Get new releases, free printables, and special offers in your inbox.</p>
+        </div>
+        <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('Thanks! You\'re subscribed.'); this.reset();">
+          <input type="email" required placeholder="Your email address" class="flex-1 px-4 py-3 rounded-xl text-enkiNavy focus:outline-none" />
+          <button class="px-6 py-3 rounded-xl bg-enkiSun text-enkiNavy font-semibold hover:opacity-90">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-8 border-t border-black/10">
+    <div class="mx-auto container-lg px-4 py-10 grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="font-display text-xl">Enki <span class="text-enkiSunDark">Box</span></div>
+        <p class="mt-2 text-enkiNavy/70 max-w-xs">Meaning in Motion — stories that teach, inspire, and stay with children forever.</p>
+      </div>
+      <div>
+        <div class="font-semibold">Explore</div>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#stories" class="hover:text-enkiSunDark">Books</a></li>
+          <li><a href="#videos" class="hover:text-enkiSunDark">Videos</a></li>
+          <li><a href="#why" class="hover:text-enkiSunDark">Why Enki</a></li>
+          <li><a href="#newsletter" class="hover:text-enkiSunDark">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">Support</div>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#" class="hover:text-enkiSunDark">Shipping & Returns</a></li>
+          <li><a href="#" class="hover:text-enkiSunDark">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-enkiSunDark">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">Contact</div>
+        <ul class="mt-2 space-y-2">
+          <li>hello@enki-box.com</li>
+          <li>Abu Dhabi, UAE</li>
+          <li class="flex gap-3 pt-1">
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-xs text-enkiNavy/60 pb-8">©️ <span id="year"></span> Enki Box. All rights reserved.</div>
+  </footer>
+
+  <!-- Simple Cart / Checkout Modal -->
+  <div id="checkoutModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50">
+    <div class="bg-white w-[92vw] max-w-md rounded-2xl p-6 shadow-soft">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-lg">Checkout</h3>
+        <button id="closeModal" class="p-2">✖️</button>
+      </div>
+      <p class="mt-2 text-sm text-enkiNavy/80">You are purchasing: <span id="checkoutItem" class="font-medium">—</span></p>
+
+      <!-- Access type selector -->
+      <fieldset class="mt-4">
+        <legend class="text-sm font-semibold">Choose access type</legend>
+        <div class="mt-2 grid grid-cols-1 gap-2 text-sm">
+          <label class="flex items-center gap-2">
+            <input type="radio" name="accessType" value="stream" checked class="accent-enkiSunDark">
+            <span>Stream (signed URL, 72‑hour access)</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="radio" name="accessType" value="download" class="accent-enkiSunDark">
+            <span>Download (MP4 file)</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <p class="mt-2 text-xs text-enkiNavy/60">After payment you’ll get an email with your access link(s). Streaming links are signed and time‑limited; downloads are watermarked to your order email.</p>
+      <p class="mt-2 text-sm text-enkiNavy/70">This demo opens a placeholder checkout. Replace the link below with your live Stripe/PayPal checkout URL.</p>
+      <a id="payLink" href="#" target="_blank" rel="noopener" class="mt-4 inline-flex items-center justify-center px-5 py-3 rounded-xl bg-enkiSunDark text-white font-semibold">Proceed to Secure Payment</a>
+      <div class="mt-3 text-xs text-enkiNavy/60">Example (Stripe): https://buy.stripe.com/your-checkout-link</div>
+    </div>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn && menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Simple checkout modal logic
+    const modal = document.getElementById('checkoutModal');
+    const closeModal = document.getElementById('closeModal');
+    const checkoutItem = document.getElementById('checkoutItem');
+    const payLink = document.getElementById('payLink');
+
+    document.querySelectorAll('.buyBtn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sku = btn.getAttribute('data-sku');
+        const names = {
+          'ebook-fox': 'The Fox & The Starlight (E‑book) — $4.00',
+          'print-lion': "The Lion’s Gentle Roar (Paperback) — $9.99",
+          'ebook-bird': 'Wings of a Promise (E‑book) — $4.00',
+          'video-fox': 'The Fox & The Starlight — Early‑Access Video — $1.99',
+          'video-lion': 'The Lion’s Gentle Roar — Early‑Access Video — $2.49',
+          'video-bird': 'Wings of a Promise — Early‑Access Video — $1.99'
+        };
+        checkoutItem.textContent = names[sku] || 'Selected Item';
+        // Default to stream option
+        const streamRadio = document.querySelector('input[name="accessType"][value="stream"]');
+        const downloadRadio = document.querySelector('input[name="accessType"][value="download"]');
+        if (streamRadio) streamRadio.checked = true;
+        // Set link based on selected access type
+        const currentType = 'stream';
+        payLink.href = (stripeLinks[currentType] && stripeLinks[currentType][sku]) || '#';
+        // Store sku for later change
+        modal.dataset.sku = sku;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+
+    // Update pay link when access type changes
+    document.querySelectorAll('input[name="accessType"]').forEach(r => {
+      r.addEventListener('change', (e) => {
+        const sku = modal.dataset.sku;
+        const t = e.target.value; // 'stream' or 'download'
+        payLink.href = (stripeLinks[t] && stripeLinks[t][sku]) || '#';
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>
