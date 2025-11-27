@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Hero = () => {
@@ -49,8 +50,9 @@ const Hero = () => {
       <div className="relative">
         <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-orange-100 to-amber-100 border border-orange-200 shadow-soft flex items-center justify-center p-8">
           <div className="text-center">
-            <div className="text-8xl">📚</div>
-            <p className="mt-3 text-enkiNavy/70">Preview pages & purchase securely</p>
+            {/* <div className="text-8xl">📚</div>
+            <p className="mt-3 text-enkiNavy/70">Preview pages & purchase securely</p> */}
+            <Image src={"/images/enkibox-logo.png"} alt='Enki Box Logo'  height={400} width={400} className=' rounded-lg'/>
           </div>
         </div>
       </div>
